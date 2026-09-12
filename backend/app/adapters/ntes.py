@@ -409,13 +409,14 @@ class NTESProvider(TrainDataProvider):
             "",
         )
 
+        # Fallback values for deployments where the environment
+        # variable is not available at runtime.
         if not raw:
-            return []
+            raw = "12919,12952,22436,16590"
 
         numbers: list[str] = []
 
         for item in raw.split(","):
-
             number = item.strip()
 
             if (
@@ -1212,13 +1213,12 @@ class NTESProvider(TrainDataProvider):
         )
 
         if not train_numbers:
-
             raise ProviderUnavailable(
-                "LIVE_TRAIN_NUMBERS is not "
-                "configured in .env"
+                "No NTES train numbers are configured."
             )
 
         trains: list[Train] = []
+        errors: list[str] = []
 
         for train_number in train_numbers:
 
@@ -1233,19 +1233,28 @@ class NTESProvider(TrainDataProvider):
 
             except Exception as exc:
 
-                print(
-                    f"[NTES] Failed train "
+                error_message = (
                     f"{train_number}: {exc}"
                 )
 
-                continue
+                errors.append(error_message)
+
+                print(
+                    f"[NTES] Failed to load "
+                    f"{error_message}"
+                )
 
         if trains:
+            print(
+                f"[NTES] Successfully loaded "
+                f"{len(trains)} train(s): "
+                f"{[train.number for train in trains]}"
+            )
             return trains
 
         raise ProviderUnavailable(
-            "No configured NTES train "
-            "could be loaded."
+            "No NTES trains could be loaded. "
+            f"Errors: {' | '.join(errors)}"
         )
 
     # ============================================================
