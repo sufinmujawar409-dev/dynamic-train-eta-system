@@ -1,0 +1,14 @@
+[
+  {
+    "train_number": "12919",
+    "train_name": "Malwa SF Express",
+    "origin": "Dr. Ambedkar Nagar",
+    "destination": "Shri Mata Vaishno Devi Katra"
+  },
+  {
+    "train_number": "12627",
+    "train_name": "Karnataka Express",
+    "origin": "KSR Bengaluru",
+    "destination": "New Delhi"
+  }
+]

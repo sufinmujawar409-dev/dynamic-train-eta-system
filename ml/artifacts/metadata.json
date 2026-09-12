@@ -1,6 +1,6 @@
 {
-  "model_version": "demo-rf-v1",
-  "model_type": "RandomForestRegressor",
+  "model_version": "demo-rf-v2",
+  "target": "eta_minutes",
   "features": [
     "current_speed",
     "current_delay",
@@ -12,12 +12,13 @@
     "congestion_factor",
     "signal_halt_minutes"
   ],
-  "target": "eta_minutes",
-  "dataset": "historical_eta_demo.csv",
-  "dataset_type": "DEMO synthetic historical data",
+  "rows": 5000,
+  "test_rows": 1000,
   "metrics": {
-    "mae": 4.125000000000001,
-    "rmse": 4.720365451953906,
-    "r2": 0.31833728489483726
-  }
+    "mae_minutes": 10.2944,
+    "rmse_minutes": 16.0618,
+    "r2": 0.9729
+  },
+  "data_type": "synthetic_demo",
+  "warning": "Synthetic training data only. Do not present these metrics as real railway prediction accuracy."
 }

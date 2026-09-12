@@ -90,7 +90,10 @@ export type Station = {
   name: string
   code: string
   sequence: number
-  data_source: 'DEMO'
+  data_source: string
+
+  latitude?: number | null
+  longitude?: number | null
 }
 
 export type EtaPrediction = {

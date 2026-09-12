@@ -1,0 +1,147 @@
+{
+  "DADN": {
+    "name": "Dr. Ambedkar Nagar",
+    "latitude": 22.8556,
+    "longitude": 75.8330
+  },
+  "INDB": {
+    "name": "Indore Jn",
+    "latitude": 22.7196,
+    "longitude": 75.8577
+  },
+  "BPW": {
+    "name": "Burhanpur",
+    "latitude": 21.3000,
+    "longitude": 76.2300
+  },
+  "BAU": {
+    "name": "Barai",
+    "latitude": 21.4300,
+    "longitude": 76.2800
+  },
+  "BAB": {
+    "name": "Babina",
+    "latitude": 25.2400,
+    "longitude": 78.4700
+  },
+  "JHS": {
+    "name": "Virangana Lakshmibai Jhansi Jn",
+    "latitude": 25.4484,
+    "longitude": 78.5685
+  },
+  "NDLS": {
+    "name": "New Delhi",
+    "latitude": 28.6431,
+    "longitude": 77.2195
+  },
+  "NZM": {
+    "name": "Hazrat Nizamuddin",
+    "latitude": 28.5889,
+    "longitude": 77.2506
+  },
+  "CNB": {
+    "name": "Kanpur Central",
+    "latitude": 26.4499,
+    "longitude": 80.3319
+  },
+  "BSB": {
+    "name": "Varanasi Jn",
+    "latitude": 25.3176,
+    "longitude": 82.9739
+  },
+  "GWL": {
+    "name": "Gwalior Jn",
+    "latitude": 26.2183,
+    "longitude": 78.1828
+  },
+  "AGC": {
+    "name": "Agra Cantt",
+    "latitude": 27.1577,
+    "longitude": 77.9842
+  },
+  "MTJ": {
+    "name": "Mathura Jn",
+    "latitude": 27.4924,
+    "longitude": 77.6737
+  },
+  "AGR": {
+    "name": "Agra",
+    "latitude": 27.1767,
+    "longitude": 78.0081
+  },
+  "BPL": {
+    "name": "Bhopal Jn",
+    "latitude": 23.2599,
+    "longitude": 77.4126
+  },
+  "ET": {
+    "name": "Itarsi Jn",
+    "latitude": 22.6055,
+    "longitude": 77.7590
+  },
+  "NGP": {
+    "name": "Nagpur",
+    "latitude": 21.1458,
+    "longitude": 79.0882
+  },
+  "R": {
+    "name": "Raipur Jn",
+    "latitude": 21.2514,
+    "longitude": 81.6296
+  },
+  "UBL": {
+    "name": "Hubballi Jn",
+    "latitude": 15.3647,
+    "longitude": 75.1240
+  },
+  "DWR": {
+    "name": "Dharwad",
+    "latitude": 15.4589,
+    "longitude": 75.0078
+  },
+  "HAV": {
+    "name": "Haveri",
+    "latitude": 14.7935,
+    "longitude": 75.4016
+  },
+  "GDG": {
+    "name": "Gadag Jn",
+    "latitude": 15.4166,
+    "longitude": 75.6295
+  },
+  "SBC": {
+    "name": "KSR Bengaluru",
+    "latitude": 12.9784,
+    "longitude": 77.5696
+  },
+  "BGM": {
+    "name": "Belagavi",
+    "latitude": 15.8497,
+    "longitude": 74.4977
+  },
+  "MRJ": {
+    "name": "Miraj Jn",
+    "latitude": 16.8250,
+    "longitude": 74.6460
+  },
+  "SGL": {
+    "name": "Sangli",
+    "latitude": 16.8524,
+    "longitude": 74.5815
+  },
+  "SNP": {
+    "name": "Sonipat",
+    "latitude": 28.9931,
+    "longitude": 77.0151
+  },
+  "GZB": {
+    "name": "Ghaziabad",
+    "latitude": 28.6692,
+    "longitude": 77.4538
+  },
+  "MGS": {
+    "name": "Pt. Deen Dayal Upadhyaya Jn",
+    "latitude": 25.2800,
+    "longitude": 83.1189
+  }
+}

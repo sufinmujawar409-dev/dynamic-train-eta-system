@@ -112,3 +112,13 @@ class Alert(Base):
     metadata_json: Mapped[dict[str, object]] = mapped_column(JSON, default=dict)
 
     train: Mapped[Train] = relationship(back_populates="alerts")
+class AppSetting(Base):
+    __tablename__ = "app_settings"
+
+    id: Mapped[int] = mapped_column(primary_key=True, default=1)
+    settings: Mapped[dict[str, object]] = mapped_column(JSON, default=dict)
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True),
+        default=datetime.utcnow,
+        onupdate=datetime.utcnow,
+    )

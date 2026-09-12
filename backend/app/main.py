@@ -5,6 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .api.health import router as health_router
 from .api.routes import alerts_router, diagnostics_router, realtime_router, router as train_router
+from .api.settings import router as settings_router
+
 
 app = FastAPI(title="Dynamic Train ETA API")
 
@@ -21,3 +23,4 @@ app.include_router(train_router)
 app.include_router(alerts_router)
 app.include_router(diagnostics_router)
 app.include_router(realtime_router)
+app.include_router(settings_router)

@@ -1,0 +1,24 @@
+{
+  "model_version": "demo-rf-v2",
+  "target": "eta_minutes",
+  "features": [
+    "current_speed",
+    "current_delay",
+    "distance_remaining",
+    "historical_delay",
+    "previous_station_delay",
+    "section_average_speed",
+    "weather_factor",
+    "congestion_factor",
+    "signal_halt_minutes"
+  ],
+  "rows": 5000,
+  "test_rows": 1000,
+  "metrics": {
+    "mae_minutes": 10.2944,
+    "rmse_minutes": 16.0618,
+    "r2": 0.9729
+  },
+  "data_type": "synthetic_demo",
+  "warning": "Synthetic training data only. Do not present these metrics as real railway prediction accuracy."
+}
