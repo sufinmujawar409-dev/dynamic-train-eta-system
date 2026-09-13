@@ -11,15 +11,27 @@ from .api.routes import (
 from .api.settings import router as settings_router
 
 
-app = FastAPI(title="Dynamic Train ETA API")
+app = FastAPI(
+    title="Dynamic Train ETA API",
+    version="1.0.0",
+)
 
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        # Local development
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+
+        # Current Vercel production
+        "https://dynamic-train-eta-system-wj43.vercel.app",
+
+        # Previous Vercel deployment
         "https://dynamic-train-eta-system-wj43-9a7a7j67w-sih-80cc.vercel.app",
+
+        # Vercel git deployment
+        "https://dynamic-train-eta-system-wj43-git-main-sih-80cc.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -27,6 +39,7 @@ app.add_middleware(
 )
 
 
+# API routers
 app.include_router(health_router)
 app.include_router(train_router)
 app.include_router(alerts_router)
