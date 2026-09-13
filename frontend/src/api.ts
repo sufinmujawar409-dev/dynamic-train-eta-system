@@ -11,12 +11,27 @@ export const API_BASE_URL = (
   'http://127.0.0.1:8000'
 ).replace(/\/$/, '')
 
-async function get<T>(
-  path: string,
-): Promise<T> {
-  const response = await fetch(
-    `${API_BASE_URL}${path}`,
-  )
+async function get<T>(path: string): Promise<T> {
+  const url = `${API_BASE_URL}${path}`
+
+  let response: Response
+
+  try {
+    response = await fetch(url, {
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+  } catch (error) {
+    console.error('API fetch failed:', {
+      url,
+      error,
+    })
+
+    throw new Error(
+      `Failed to fetch ${url}. Check backend/CORS connection.`,
+    )
+  }
 
   if (!response.ok) {
     let message = `API request failed (${response.status})`
@@ -82,15 +97,16 @@ export const api = {
     ),
 
   alerts: (params = '') =>
-    get<Alert[]>(
-      `/api/alerts${params}`,
-    ),
+    get<Alert[]>(`/api/alerts${params}`),
 
   acknowledgeAlert: (id: string) =>
     fetch(
       `${API_BASE_URL}/api/alerts/${encodeURIComponent(id)}/acknowledge`,
       {
         method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
       },
     ).then(async (response) => {
       if (!response.ok) {

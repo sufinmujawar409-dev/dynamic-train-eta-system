@@ -23,15 +23,12 @@ app.add_middleware(
         # Local development
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
 
-        # Current Vercel production
+        # Vercel production
         "https://dynamic-train-eta-system-wj43.vercel.app",
-
-        # Previous Vercel deployment
         "https://dynamic-train-eta-system-wj43-9a7a7j67w-sih-80cc.vercel.app",
-
-        # Vercel git deployment
-        "https://dynamic-train-eta-system-wj43-git-main-sih-80cc.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
